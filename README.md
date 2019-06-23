@@ -15,8 +15,7 @@ sudo chmod 666 /var/run/docker.sock
 ### Run docker image
 
 ```
-sudo systemctl status docker # check status
+sudo service status docker
 newgrp docker
 docker run
 ```
-
