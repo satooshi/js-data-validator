@@ -1,0 +1,10 @@
+{
+  "name": "js-data-validator",
+  "version": "0.1",
+  "description": "dataset validator",
+  "main": "index.js",
+  "repository": "https://github.com/satooshi/js-data-validator",
+  "author": "Kitamura Satoshi",
+  "license": "MIT",
+  "private": false
+}
