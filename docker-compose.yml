@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  node:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      - NODE_MAX_OLD_SPACE_SIZE=8192
+    user: "node"
+    working_dir: /home/node
+    command: /bin/sh -c "while sleep 60; do :; done" 
+      
