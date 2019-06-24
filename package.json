@@ -2,18 +2,38 @@
   "name": "js-data-validator",
   "version": "0.1",
   "description": "dataset validator",
-  "main": "index.js",
+  "main": "main.js",
   "repository": "https://github.com/satooshi/js-data-validator",
   "author": "Kitamura Satoshi",
   "license": "MIT",
   "private": false,
   "devDependencies": {
+    "@types/jest": "^24.0.15",
     "eslint": "^6.0.0",
     "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
     "ts-loader": "^6.0.4",
     "typescript": "^3.5.2",
     "webpack": "^4.35.0",
     "webpack-cli": "^3.3.5"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.json"
+      }
+    },
+    "testMatch": [
+      "**/__tests__/*.+(ts|tsx|js)"
+    ]
   },
   "scripts": {
     "build": "webpack",
