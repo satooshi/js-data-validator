@@ -4,9 +4,11 @@
  */
 export class Validator {
   dataSet: object;
+  constraints: object
 
-  constructor(dataSet: object) {
+  constructor(dataSet: object, constraints: object) {
     this.dataSet = dataSet;
+    this.constraints= constraints;
   }
 
   /**
@@ -54,6 +56,11 @@ export class ValidationResult {
     return errors.length === 0
   }
 }
+/**
+ * Validation rule that the value must be satisfied.
+ */
+export class Constraint {
+}
 
 /**
  * Exposed function to validate data set.
@@ -61,6 +68,6 @@ export class ValidationResult {
  * @param dataSet {object} The data set to validate.
  * @returns {ValidationResult}
  */
-export function validate(dataSet: object): ValidationResult {
-  return new ValidationResult(new Validator(dataSet));
+export function validate(dataSet: object, constraints: object): ValidationResult {
+  return new ValidationResult(new Validator(dataSet, constraints));
 }
