@@ -16,4 +16,9 @@ export default class ConstraintViolation {
    * Violated value.
    */
   invalidValue;
+
+  constructor(constraint: Constraint, invalidValue) {
+    this.constraint = constraint;
+    this.invalidValue= invalidValue;
+  }
 }
